@@ -44,10 +44,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className={`flex-shrink-0 ${isScrolled ?'text-gray-800':'text-white'} flex items-center`}>
+          <a href='/' className={`flex-shrink-0 ${isScrolled ?'text-gray-800':'text-white'} flex items-center`}>
             <Package className="h-8 w-8 text-indigo-600" />
             <span className={`ml-2 text-xl font-bold ${isScrolled ?'text-gray-900':'text-white'}`}>LocalCart</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className={`hidden md:flex items-center space-x-8 ${isScrolled ?'text-gray-900':'text-white'}`}>
