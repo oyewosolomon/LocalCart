@@ -13,7 +13,11 @@ const AboutSection = () => {
     { icon: CheckCircle, title: 'Reliability', description: 'Delivering on our promises, every single time' },
     { icon: Heart, title: 'Community Empowerment', description: 'Supporting local businesses and communities' }
   ];
-
+  const stats = [
+    { value: '25,000+', label: 'Local Retailers Connected' },
+    { value: '98%', label: 'On-Time Delivery Rate' },
+    { value: '1M+', label: 'Monthly Deliveries' },
+  ];
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,6 +47,18 @@ const AboutSection = () => {
             Founded in 2020, LocalCart Solutions has grown from a small startup to a trusted partner 
             for 25,000 retailers across 100 cities, driven by our commitment to excellence and innovation.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 mt-5 md:hidden">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="text-3xl font-bold text-indigo-600 mb-2">{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
         </div>
       </div>
     </section>

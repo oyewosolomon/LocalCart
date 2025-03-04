@@ -21,6 +21,7 @@ import ServicesSection from "@/components/sections/Services";
 import HowItWorksSection from "@/components/sections/HowItWorks";
 import CitiesSection from "@/components/sections/Cities";
 import ContactSection from "@/components/sections/Contact";
+import FaqSection from "@/components/sections/FAQ";
 
 export default function Home() {
   return (
@@ -30,8 +31,8 @@ export default function Home() {
       <ServicesSection/>
       <HowItWorksSection/>
       <CitiesSection/>
-      <ContactSection/> 
-      <ContactUs/>
+    <FaqSection/>
+      {/* <ContactUs/> */}
       <Footer/>
     </main>
   );

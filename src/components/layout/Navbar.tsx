@@ -38,30 +38,30 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent text-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className={`flex-shrink-0 ${isScrolled ?'text-gray-800':'text-white'} flex items-center`}>
             <Package className="h-8 w-8 text-indigo-600" />
-            <span className="ml-2 text-xl font-bold text-gray-900">LocalCart</span>
+            <span className={`ml-2 text-xl font-bold ${isScrolled ?'text-gray-900':'text-white'}`}>LocalCart</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className={`hidden md:flex items-center space-x-8 ${isScrolled ?'text-gray-900':'text-white'}`}>
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <button className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-200">
+                  <button className={`flex items-center text-gray-600 ${isScrolled ?'text-gray-900':'text-white'} hover:text-indigo-600 transition-colors duration-200`}>
                     {item.name}
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 ) : (
                   <a
                     href={item.href}
-                    className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"
+                    className={`${isScrolled ?'text-gray-900':'text-white'} hover:text-indigo-600 transition-colors duration-200`}
                   >
                     {item.name}
                   </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
             ))}
 
             {/* CTA Buttons */}
-            <button className="px-4 py-2 text-indigo-600 hover:text-indigo-700 transition-colors duration-200">
+            <button className={`px-4 py-2 ${isScrolled ?'text-gray-900':'text-white'} hover:text-indigo-700 transition-colors duration-200`}>
               Login
             </button>
             <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200">

@@ -1,35 +1,54 @@
-import React from 'react';
-import { ArrowRight, Package, Clock, Database, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Array of background images
+  const backgroundImages = [
+    '/images/bg.jpg',
+    '/images/bg-2.jpg',
+    // '/images/bg3.jpg',
+  ];
+
+  // Function to switch to the next image
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [backgroundImages.length]);
+
   const stats = [
     { value: '25,000+', label: 'Local Retailers Connected' },
     { value: '98%', label: 'On-Time Delivery Rate' },
-    { value: '1M+', label: 'Monthly Deliveries' }
-  ];
-
-  const features = [
-    { icon: Clock, title: 'Same-Day Delivery', description: 'Get your orders delivered the same day, every time.' },
-    { icon: Database, title: 'Inventory Sync', description: 'Real-time inventory updates for seamless operations.' },
-    { icon: Package, title: 'Payment Processing', description: 'Secure, hassle-free payments for retailers and customers.' },
-    { icon: Globe, title: 'Wide Reach', description: 'Serving 100 cities and growing.' }
+    { value: '1M+', label: 'Monthly Deliveries' },
   ];
 
   return (
-    <div className="relative bg-white overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50" />
+    <div className="relative bg-white overflow-hidden h-screen">
+      {/* Background Slideshow */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
+        style={{
+          backgroundImage: `url(${backgroundImages[currentImageIndex]})`,
+        }}
+      />
+
+      {/* Overlay to make text readable */}
+      <div className="absolute inset-0 bg-black opacity-30" />
 
       {/* Hero Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 transition-all duration-300 hover:scale-105">
-            Empowering Local Retailers, 
-            <span className="block text-indigo-600">Delivering Happiness to Your Doorstep</span>
+      <div className="relative h-full flex items-center justify-center">
+        <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 transition-all duration-300 hover:scale-105">
+            Empowering Local Retailers,
+            <span className="block text-indigo-300">Delivering Happiness to Your Doorstep</span>
           </h1>
-          
-          <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-10">
-            Your Last-Mile Delivery Partner in 100 Cities. 
+
+          <p className="max-w-2xl mx-auto text-xl text-white mb-10">
+            Your Last-Mile Delivery Partner in 100 Cities.
             <span className="font-semibold">98% On-Time Delivery, Every Time.</span>
           </p>
 
@@ -46,28 +65,14 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 hidden md:grid">
             {stats.map((stat, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="text-3xl font-bold text-indigo-600 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <feature.icon className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
