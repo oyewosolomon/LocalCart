@@ -41,7 +41,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/cities" className="text-gray-400 hover:text-indigo-500 transition-colors">
+                <a href="/#cities" className="text-gray-400 hover:text-indigo-500 transition-colors">
                   Cities We Serve
                 </a>
               </li>
@@ -65,18 +65,18 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2" />
                 <a href="mailto:info@localcartsolutions.com" className="hover:text-indigo-500 transition-colors">
-                  info@localcartsolutions.com
+                  hello@localcart-ng.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
                 <a href="tel:+1234567890" className="hover:text-indigo-500 transition-colors">
-                  +1 (234) 567-890
+                  +2348067794162
                 </a>
               </li>
               <li className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>123 LocalCart Street, City, Country</span>
+                <span>Lagos Island, Lagos</span>
               </li>
             </ul>
           </div>

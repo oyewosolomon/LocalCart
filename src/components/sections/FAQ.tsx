@@ -97,7 +97,7 @@ const FaqSection: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div className="max-w-7xl mx-auto px-4 py-16 md:py-24" id='faqs'>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* Left column with title */}
         <div className="md:col-span-4">

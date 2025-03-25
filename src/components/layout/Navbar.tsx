@@ -32,7 +32,7 @@ const Navbar = () => {
       ]
     },
     { name: 'Cities', href: '#cities' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Faqs', href: '#faqs' }
   ];
 
   return (
