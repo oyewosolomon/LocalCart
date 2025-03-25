@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    /* Add Lora font family */
+    --font-lora: 'Lora', serif;
   }
 
   .dark {
@@ -48,17 +50,36 @@
     --ring: 224.3 76.3% 48%;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  p, div, span {
+    @apply font-sans;
+  }
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+
+   /* Apply Lora to all heading tags */
+   h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-family: var(--font-lora);
   }
 
-  
+  /* Apply sans-serif to p, div, span */
+  p, div, span {
+    @apply font-sans;
+    font-family: var(--font-sans);
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Apply Lora font to entire body */
+    font-family: var(--font-sans);
+  }
+}
+
 @layer components {
   .container {
     @apply mx-auto w-full max-w-screen-xl px-4 md:px-6 lg:px-8;
   }
-}
 }
