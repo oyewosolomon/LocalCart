@@ -68,16 +68,7 @@ const Footer = () => {
                   hello@localcart-ng.com
                 </a>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-2" />
-                <a href="tel:+1234567890" className="hover:text-indigo-500 transition-colors">
-                  +2348067794162
-                </a>
-              </li>
-              <li className="flex items-center">
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>Lagos Island, Lagos</span>
-              </li>
+             
             </ul>
           </div>
 
