@@ -12,42 +12,42 @@ const products: Product[] = [
     {
       id: 1,
       name: "Organic Apples",
-      price: "$2.99",
+      price: "₦2,000.99",
       image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "FreshMart"
     },
     {
       id: 2,
       name: "Whole Grain Bread",
-      price: "$3.49",
+      price: "₦1,800.49",
       image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "Bakery Delight"
     },
     {
       id: 3,
       name: "Free-Range Eggs",
-      price: "$4.99",
+      price: "₦4,000.99",
       image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "FarmFresh"
     },
     {
       id: 4,
       name: "Almond Milk",
-      price: "$5.49",
+      price: "₦19,005.49",
       image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "HealthyBites"
     },
     {
       id: 5,
       name: "Organic Spinach",
-      price: "$2.29",
+      price: "₦10,000.29",
       image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "GreenGrocer"
     },
     {
       id: 6,
       name: "Greek Yogurt",
-      price: "$3.99",
+      price: "₦8,000.99",
       image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
       retailer: "DairyGoodness"
     }
