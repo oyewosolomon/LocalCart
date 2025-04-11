@@ -31,7 +31,6 @@ const Navbar = () => {
         { name: 'Careers', href: '#careers' }
       ]
     },
-    { name: 'Cities', href: '#cities' },
     { name: 'Faqs', href: '#faqs' }
   ];
 
