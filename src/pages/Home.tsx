@@ -28,11 +28,12 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <ProductListingSection/>
       <AboutSection/>
       <ServicesSection/>
       <HowItWorksSection/>
-      <ProductListingSection/>
-    <FaqSection/>
+      
+      <FaqSection/>
       {/* <ContactUs/> */}
       <Footer/>
     </main>
